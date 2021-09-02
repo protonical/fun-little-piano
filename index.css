@@ -1,0 +1,72 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    /*width: 80vw;*/
+    /*height: 20vh;*/
+    background-image: url("gradients.jpg");
+    width: 750px;
+    height: 422px;
+    background-size: cover;
+    box-shadow: 0 10px 20px #234;
+}
+.white-keys, .black-keys {
+    position: absolute;
+    width: 750px;
+    height: 422px;
+    display: flex;
+    align-items: center;
+}
+.black-keys {
+    height: 300px;
+}
+kbd {
+    /*z-index: 3;*/
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    font-size: 3rem;
+    background-color: #fff9;
+    /*transition: .1s;*/
+    backdrop-filter: blur(30px) saturate(0%);
+    user-select: none;
+    /*box-sizing: border-box;*/
+    border: 2px solid #fff0;
+    box-sizing: border-box;
+}
+.white-keys kbd {
+    justify-content: flex-end;
+    line-height: 120px;
+}
+.black-keys kbd {
+    flex: 0 70px;
+    background-color: #2229;
+    color: #fff;
+}
+kbd:hover, .active {
+    backdrop-filter: blur(30px) saturate(100%);
+    background-color: #0000;
+    color: #fff;
+}
+.black-keys kbd:hover, .black-keys .active {
+    color: #222;
+    background-color: #fff9;
+}
+#b1 {
+    margin-left: calc(107px - 35px);
+}
+#b2, #b4, #b5 {
+    margin-left: 37px;
+}
+#b3 {
+    margin-left: calc(107px + 37px);
+}
